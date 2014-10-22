@@ -47,7 +47,7 @@ var update = function() {
 	for(x in data) {
 		var blueVal = Math.round((highest - data[x][1]) * (255 / (highest - lowest)));
 		console.log(blueVal)
-		$(".square").eq(x).css('background-color', 'rgb(0, 0, ' + blueVal + ')');
+		$(".square").eq(x).css('background-color', 'rgb(0, 0, ' + (255-blueVal) + ')');
 	}
 	console.log("lowest: " + lowest + ", highest: " + highest);
 }
