@@ -1,0 +1,17 @@
+$width: 1920px;
+$height: 1080px;
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.view {
+	display: block;
+	background-color: #444;
+	width: $width / 2;
+	height: $height / 2;
+	position: absolute;
+}
+
