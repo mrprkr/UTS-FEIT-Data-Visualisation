@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link type="text/css" rel="stylesheet" href="assets/css/stylesheet.css">
+
+</head>
+<body>
+<div class="canvasContainer">
+<canvas id="myCanvas" width="600" height="350"></canvas>
+</div>
+
+</body>
+	<script>
+	  var canvas = document.getElementById('myCanvas');
+	  var context = canvas.getContext('2d');
+	  var canvasWidth = canvas.width;
+	  var canvasHeight = canvas.height;
+	  var x = canvasWidth/2;
+	  var y = canvasHeight/2;
+	  var counterClockwise = false;
+
+	  function drawArc(radius){
+	  	  var endAngle = 1.5 * Math.PI;
+	  	  var startAngle = 1.5 * Math.PI;
+
+
+		  context.beginPath();
+		  context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+  		  context.lineWidth = 15;
+		  context.strokeStyle = 'black';
+  		  context.stroke();
+	  }
+
+	  drawArc(75);
+
+	</script>
+
+</html>
